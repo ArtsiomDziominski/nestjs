@@ -1,15 +1,15 @@
 import {Controller, Get, HttpCode, HttpStatus, Param} from '@nestjs/common';
-import {END_POINT_NEW_ORDER, POST} from "../const";
 import {HttpRequestService} from "../service/http-request.service";
+import {END_POINT_BALANCE, POST} from "../const";
 
-@Controller('new-order')
-export class NewOrderController {
+@Controller('balance')
+export class BalanceController {
     constructor(private httpRequestService: HttpRequestService) {
     }
 
     @Get(':params')
     @HttpCode(HttpStatus.CREATED)
     createNewOrder(@Param('params') param: string): any {
-        return this.httpRequestService.httpRequest(param, END_POINT_NEW_ORDER, POST);
+        return this.httpRequestService.httpRequest(param, END_POINT_BALANCE, POST);
     }
 }

@@ -1,19 +1,12 @@
-import {Body, Controller, Get, Param, Post} from '@nestjs/common';
-import { AppService } from './app.service';
-import {CreateNewOrderDto} from "./new-order/create-new-order.dto";
+import {Controller, Get, Param} from '@nestjs/common';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor() {}
 
-  @Get()
-  getHello(){
-    return 'signature';
-  }
-
-  @Post()
-  create(@Body() createNewOrderDto: CreateNewOrderDto){
-    console.log(createNewOrderDto)
-    return createNewOrderDto.signature
+  @Get(':params')
+  getHello(@Param('params') params: string) {
+    console.log(JSON.parse(params))
+    return JSON.parse(params);
   }
 }
