@@ -1,6 +1,9 @@
 export const GET: string = 'GET'
 export const POST: string = 'POST'
+export const DELETE: string = 'DELETE'
+export const TURL: string = "https://testnet.binancefuture.com";
 export const BURL: string = "https://fapi.binance.com";
 export const END_POINT_NEW_ORDER: string = "/fapi/v1/order";
 export const END_POINT_POSITION_RISK: string = "/fapi/v2/positionRisk";
 export const END_POINT_BALANCE: string = "/fapi/v2/balance";
+export const INCOME_HISTORY: string = "/fapi/v1/income";
