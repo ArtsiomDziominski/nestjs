@@ -1,0 +1,12 @@
+export declare const GET: string;
+export declare const POST: string;
+export declare const DELETE: string;
+export declare const TURL: string;
+export declare const BURL: string;
+export declare const POINT_NEW_ORDER: string;
+export declare const END_POINT_POSITION_RISK: string;
+export declare const END_POINT_BALANCE: string;
+export declare const INCOME_HISTORY: string;
+export declare const CANCEL_ALL_ORDERS: string;
+export declare const OPEN_ORDER_SYMBOL: string;
+export declare const DELETE_LIST_ORDERS_SYMBOL: string;
