@@ -1,15 +1,15 @@
 import {Controller, Get, HttpCode, HttpStatus, Param} from '@nestjs/common';
 import {HttpRequestService} from "../service/http-request.service";
-import {END_POINT_BALANCE, GET} from "../const";
+import {CANCEL_ALL_ORDERS, DELETE} from "../const";
 
-@Controller('balance')
-export class BalanceController {
+@Controller('cancel-open-orders')
+export class CancelOrderController {
     constructor(private httpRequestService: HttpRequestService) {
     }
 
     @Get(':params')
     @HttpCode(HttpStatus.OK)
-    createNewOrder(@Param('params') param: string): any {
-        return this.httpRequestService.httpRequest(param, END_POINT_BALANCE, GET);
+    marketNewOrder(@Param('params') param: string): any {
+        return this.httpRequestService.httpRequest(param, CANCEL_ALL_ORDERS, DELETE);
     }
 }
